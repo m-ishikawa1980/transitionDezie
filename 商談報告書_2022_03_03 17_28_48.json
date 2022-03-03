@@ -1,0 +1,131 @@
+﻿{
+  "HeaderInfo": {
+    "BaseSiteId": 30282,
+    "Server": "http://localhost",
+    "CreatorName": "Administrator",
+    "PackageTime": "2022-03-03T17:28:48.3944015+09:00",
+    "Convertors": [
+      {
+        "SiteId": 30282,
+        "SiteTitle": "商談報告書",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      }
+    ],
+    "IncludeSitePermission": false,
+    "IncludeRecordPermission": false,
+    "IncludeColumnPermission": false,
+    "IncludeNotifications": false,
+    "IncludeReminders": false
+  },
+  "Sites": [
+    {
+      "TenantId": 1,
+      "SiteId": 30282,
+      "Title": "商談報告書",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 30281,
+      "InheritPermission": 30281,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "GridColumns": [
+          "ResultId",
+          "DateB",
+          "ClassA",
+          "ClassB",
+          "ClassC",
+          "ClassD",
+          "ClassE",
+          "ClassF",
+          "DescriptionA",
+          "DateA",
+          "CheckA",
+          "AttachmentsA",
+          "NumA",
+          "Updator",
+          "UpdatedTime"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ResultId",
+            "Ver",
+            "DateB",
+            "ClassA",
+            "ClassB",
+            "ClassC",
+            "ClassD",
+            "ClassF",
+            "DescriptionA",
+            "ClassE",
+            "DateA",
+            "CheckA",
+            "AttachmentsA",
+            "NumA"
+          ]
+        },
+        "Columns": [
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "部署名",
+            "ChoicesText": "第一営業部\n第二営業部\n",
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "名前",
+            "ChoicesText": "佐藤 昇\n鈴木 拓也\n田中 美子",
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "お客様コード"
+          },
+          {
+            "ColumnName": "ClassD",
+            "LabelText": "お客様名"
+          },
+          {
+            "ColumnName": "DescriptionA",
+            "LabelText": "商談内容"
+          },
+          {
+            "ColumnName": "ClassE",
+            "LabelText": "見込みランク",
+            "ChoicesText": "A,東京\nB,大阪\nC,福岡",
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassF",
+            "LabelText": "商談項目"
+          },
+          {
+            "ColumnName": "DateA",
+            "LabelText": "次回訪問日"
+          },
+          {
+            "ColumnName": "CheckA",
+            "LabelText": "上司のチェック"
+          },
+          {
+            "ColumnName": "DateB",
+            "LabelText": "日付"
+          },
+          {
+            "ColumnName": "NumA",
+            "LabelText": "金額"
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    }
+  ],
+  "Data": [],
+  "Permissions": []
+}
