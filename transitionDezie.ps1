@@ -5,10 +5,10 @@ $url = 'http://localhost/api/items/99999/create'
 $ApiKey = 'xxxxxxxxxxxxxxxxxxxxxxx'
 
 # デヂエから出力したxmlファイルのPATHを指定します。
-$source = 'C:\Users\石川学\Documents\作業用\20220301_デジエ移行サンプル\db65.xml'
+$source = 'C:\temp\db65.xml'
 
 # デヂエ資源のPATHを指定します。（添付ファイルを登録するため）
-$deziePatch = 'C:\Users\石川学\Documents\作業用\20220301_デジエ移行サンプル\dze'
+$deziePatch = 'C:\Program Files (x86)\Apache Software Foundation\Apache2.2\cgi-bin\cbdb\dze'
 
 # AttachmentsのcontentType判定用
 Add-Type -AssemblyName System.Web
