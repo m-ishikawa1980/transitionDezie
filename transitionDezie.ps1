@@ -10,6 +10,9 @@ $source = 'C:\Users\石川学\Documents\作業用\20220301_デジエ移行サンプル\db65.xml
 # デヂエ資源のPATHを指定します。（添付ファイルを登録するため）
 $deziePatch = 'C:\Users\石川学\Documents\作業用\20220301_デジエ移行サンプル\dze'
 
+# AttachmentsのcontentType判定用
+Add-Type -AssemblyName System.Web
+
 # デヂエのフィールドIDとpleasanterの項目IDの対応を指定します。
 $ConvItemsId = @{
 
@@ -81,6 +84,9 @@ function main {
             switch -Wildcard ($ConvItemsId[$fieldId]) {
 
                 'Attachments*' {
+
+                    # ファイル名からcontentTypeを取得
+                    $contentType = [System.Web.MimeMapping]::GetMimeMapping($valueItem.file.innerText)
                     
                     # 添付ファイルはライブラリID、フィールドID、レコードIDより対象ファイルを判断
                     $attachFile = EditAttach-Path $libraryId $fieldId $recordId                    
@@ -92,7 +98,7 @@ function main {
                     $attachments = New-Object System.Collections.ArrayList
                     $attachments.Add(@{
                         Name = $valueItem.file.innerText
-                        ContentType = 'application/octet-stream'
+                        ContentType = $contentType
                         Base64 = $b64
                     })
                     $AttachmentsHash.Add($ConvItemsId[$fieldId],$attachments)
